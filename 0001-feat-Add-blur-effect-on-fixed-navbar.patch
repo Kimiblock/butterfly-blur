@@ -1,0 +1,43 @@
+From 6f55771a9de27900f267454d1ae607aec3013344 Mon Sep 17 00:00:00 2001
+From: EdgeNeko <edgeneko@aiursoft.com>
+Date: Thu, 7 Apr 2022 21:07:15 +0800
+Subject: [PATCH] feat: Add blur effect on fixed navbar
+
+---
+ source/css/_layout/head.styl   | 4 +++-
+ source/css/_mode/darkmode.styl | 2 +-
+ 2 files changed, 4 insertions(+), 2 deletions(-)
+
+diff --git a/source/css/_layout/head.styl b/source/css/_layout/head.styl
+index 87aa211..ccbebf4 100644
+--- a/source/css/_layout/head.styl
++++ b/source/css/_layout/head.styl
+@@ -133,9 +133,11 @@
+       position: fixed
+       top: -60px
+       z-index: 91
+-      background: rgba(255, 255, 255, .8)
++      background: rgba(255, 255, 255, .6)
+       box-shadow: 0 5px 6px -5px alpha($grey, .6)
+       transition: transform .2s ease-in-out, opacity .2s ease-in-out
++      backdrop-filter: blur(20px)
++      -webkit-backdrop-filter: blur(20px)
+ 
+       a,
+       #site-name,
+diff --git a/source/css/_mode/darkmode.styl b/source/css/_mode/darkmode.styl
+index f24a258..d4ff89f 100644
+--- a/source/css/_mode/darkmode.styl
++++ b/source/css/_mode/darkmode.styl
+@@ -74,7 +74,7 @@ if hexo-config('darkmode.enable') || hexo-config('display_mode') == 'dark'
+     #page-header
+       &.nav-fixed > #nav,
+       &.not-top-img > #nav
+-        background: alpha(#121212, .8)
++        background: alpha(#121212, .6)
+         box-shadow: 0 5px 6px -5px rgba(133, 133, 133, 0)
+ 
+     #post-comment
+-- 
+2.41.0
+
