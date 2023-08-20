@@ -1,0 +1,24 @@
+From 04ddf78b06a4eafd43e0918afad96cf625f90534 Mon Sep 17 00:00:00 2001
+From: Kimiblock <pn3535@icloud.com>
+Date: Sun, 20 Aug 2023 12:05:11 +0800
+Subject: [PATCH] Blurred search
+
+---
+ source/css/_search/index.styl | 1 +
+ 1 file changed, 1 insertion(+)
+
+diff --git a/source/css/_search/index.styl b/source/css/_search/index.styl
+index f62f9d0..9c61b3d 100644
+--- a/source/css/_search/index.styl
++++ b/source/css/_search/index.styl
+@@ -52,6 +52,7 @@
+   z-index: 1000
+   display: none
+   background: rgba($dark-black, .6)
++  backdrop-filter: blur(20px)
+ 
+ if hexo-config('algolia_search.enable')
+   @require 'algolia'
+-- 
+2.41.0
+
