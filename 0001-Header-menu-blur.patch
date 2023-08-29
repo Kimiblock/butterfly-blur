@@ -1,0 +1,55 @@
+From 8b8f378b79c834d2fb58f66e09fd4c0cb0b68cf7 Mon Sep 17 00:00:00 2001
+From: Kimiblock <pn3535@icloud.com>
+Date: Wed, 30 Aug 2023 00:17:32 +0800
+Subject: [PATCH] Header menu blur
+
+---
+ source/css/_layout/head.styl   | 7 ++++---
+ source/css/_mode/darkmode.styl | 3 ++-
+ 2 files changed, 6 insertions(+), 4 deletions(-)
+
+diff --git a/source/css/_layout/head.styl b/source/css/_layout/head.styl
+index ab50d1c..bf6ae09 100644
+--- a/source/css/_layout/head.styl
++++ b/source/css/_layout/head.styl
+@@ -334,8 +334,9 @@
+         margin-top: 8px
+         padding: 0
+         width: max-content
+-        border-radius: 5px
+-        background-color: var(--sidebar-bg)
++        border-radius: 8px
++        background-color: var(--card-bg-transparent)
++        backdrop-filter: blur(20px)
+         box-shadow: 0 5px 20px -4px rgba($dark-black, .5)
+         animation: sub_menus .3s .1s ease both
+ 
+@@ -406,4 +407,4 @@
+ 
+       &:hover
+         &:after
+-          width: 100%
+\ No newline at end of file
++          width: 100%
+diff --git a/source/css/_mode/darkmode.styl b/source/css/_mode/darkmode.styl
+index 711a175..350b9de 100644
+--- a/source/css/_mode/darkmode.styl
++++ b/source/css/_mode/darkmode.styl
+@@ -15,6 +15,7 @@ if hexo-config('darkmode.enable') || hexo-config('display_mode') == 'dark'
+     --tab-button-hover-bg: lighten(#121212, 15)
+     --tab-button-active-bg: #121212
+     --card-bg: #121212
++    --card-bg-transparent: alpha(#ffffff, .8)
+     --sidebar-bg: #121212
+     --btn-hover-color: lighten(#121212, 40)
+     --btn-color: alpha(#FFFFFF, .7)
+@@ -147,4 +148,4 @@ if hexo-config('darkmode.enable') || hexo-config('display_mode') == 'dark'
+ 
+     #card-toc
+       +maxWidth900()
+-        background: lighten(#121212, 5)
+\ No newline at end of file
++        background: lighten(#121212, 5)
+-- 
+2.42.0
+
