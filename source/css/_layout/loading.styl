@@ -4,7 +4,8 @@ if hexo-config('preloader.enable') && hexo-config('preloader.source') == 1
     z-index: 1000
     width: 50%
     height: 100%
-    background-color: var(--preloader-bg)
+    background-color: var(--card-bg-transparent)
+    backdrop-filter: blur(20px)
 
   #loading-box
     .loading-left-bg
