@@ -1,0 +1,25 @@
+From 68e11bd19f831980b54363a8bf88bebd93e4ff7e Mon Sep 17 00:00:00 2001
+From: Kimiblock <pn3535@icloud.com>
+Date: Wed, 30 Aug 2023 00:36:03 +0800
+Subject: [PATCH] Fix dark mode
+
+---
+ source/css/_mode/darkmode.styl | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+diff --git a/source/css/_mode/darkmode.styl b/source/css/_mode/darkmode.styl
+index 350b9de..b5af7cd 100644
+--- a/source/css/_mode/darkmode.styl
++++ b/source/css/_mode/darkmode.styl
+@@ -15,7 +15,7 @@ if hexo-config('darkmode.enable') || hexo-config('display_mode') == 'dark'
+     --tab-button-hover-bg: lighten(#121212, 15)
+     --tab-button-active-bg: #121212
+     --card-bg: #121212
+-    --card-bg-transparent: alpha(#ffffff, .8)
++    --card-bg-transparent: alpha(#121212, .8)
+     --sidebar-bg: #121212
+     --btn-hover-color: lighten(#121212, 40)
+     --btn-color: alpha(#FFFFFF, .7)
+-- 
+2.42.0
+
