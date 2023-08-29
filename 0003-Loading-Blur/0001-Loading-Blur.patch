@@ -1,0 +1,26 @@
+From 4b685e7a40a88a540312cd02aee3b7b89903eb77 Mon Sep 17 00:00:00 2001
+From: Kimiblock <pn3535@icloud.com>
+Date: Wed, 30 Aug 2023 00:37:37 +0800
+Subject: [PATCH] Loading Blur
+
+---
+ source/css/_layout/loading.styl | 3 ++-
+ 1 file changed, 2 insertions(+), 1 deletion(-)
+
+diff --git a/source/css/_layout/loading.styl b/source/css/_layout/loading.styl
+index 9f63e15..19747c6 100644
+--- a/source/css/_layout/loading.styl
++++ b/source/css/_layout/loading.styl
+@@ -4,7 +4,8 @@ if hexo-config('preloader.enable') && hexo-config('preloader.source') == 1
+     z-index: 1000
+     width: 50%
+     height: 100%
+-    background-color: var(--preloader-bg)
++    background-color: var(--card-bg-transparent)
++    backdrop-filter: blur(20px)
+ 
+   #loading-box
+     .loading-left-bg
+-- 
+2.42.0
+
