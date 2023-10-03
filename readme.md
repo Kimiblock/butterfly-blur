@@ -1,3 +1,8 @@
+# Deprecated
+
+See https://github.com/Kimiblock/butterfly-blurred
+
+
 # Use
 
 At you theme's root, clone this repository.
